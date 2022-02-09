@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.all-cards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+article{
+    margin: 1%;
+    
+}
+article:hover{
+    box-shadow: 1px 1px 5px black;
+    border-radius: 5px;
+}
+</style>
+
+</head>
+<body>
+   <div class="all-cards">
+
+
+
+   </div>
+    
+
+
+    <script>
+const cardsArray=[
+    {
+        id:1,
+        title:"Croissants | Flour and Stone",
+        thumbnail:"https://i.vimeocdn.com/video/600595198_390x220.webp"
+    },
+    {
+        id:2,
+        title:"Perfect Mashed Potatoes and Gravy",
+        thumbnail:"https://i.vimeocdn.com/video/604150056_390x220.webp"
+    },
+    
+    {
+        id:3,
+        title:"The Heart of Soda",
+        thumbnail:"https://i.vimeocdn.com/video/726986673_390x220.webp"
+    },
+    {
+        id:4,
+        title:"Grilled Cheese 9 Ways",
+        thumbnail:"https://i.vimeocdn.com/video/570486309_390x220.webp"
+    },
+    {
+        id:5,
+        title:"Pineapple Cheesecake",
+        thumbnail:"https://i.vimeocdn.com/video/602705517_390x220.webp"
+    },
+    {
+        id:6,
+        title:"Lemony Chicken Noodle Soup",
+        thumbnail:"https://i.vimeocdn.com/video/537261616_390x220.webp"
+    },
+    {
+        id:7,
+        title:"Perfect Mashed Potatoes and Gravy",
+        thumbnail:"https://i.vimeocdn.com/video/608805594_390x220.webp"
+    },
+    {
+        id:8,
+        title:"How to Brine a Turkey",
+        thumbnail:"https://i.vimeocdn.com/video/601730519_390x220.webp"
+    },
+    {
+        id:9,
+        title:"Perfect Mashed Potatoes and Gravy",
+        thumbnail:"https://i.vimeocdn.com/video/604150056_390x220.webp"
+    },
+    {
+        id:10,
+        title:"Butternut Squash Ravioli",
+        thumbnail:"https://i.vimeocdn.com/video/600328152_390x220.webp"
+    }
+];
+
+
+
+
+let htmlCode =``;
+cardsArray.forEach(function(singleCards){
+    htmlCode =
+    htmlCode +
+    `
+    <article>
+        <div>
+            <img src="${singleCards.thumbnail}" alt="${singleCards.imageAlt}">
+            </div>
+            <div>
+                <h3>${singleCards.title}</h3>
+                </div>
+                </article>
+                `;
+            
+});
+
+const  cards=document.querySelector(".all-cards")
+cards.innerHTML=htmlCode;
+
+
+    </script>
+</body>
+</html>
